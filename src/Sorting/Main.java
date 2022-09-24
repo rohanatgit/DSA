@@ -1,22 +1,31 @@
 package Sorting;
-
 import java.util.*;
 public class Main {
-    public static void main(String args[]) {
+    public static void selection_sort(int arr[],int n){
+        for(int i=0;i<n;i++){
+            int min_index=i;
+            for(int j=i+1;j<n;j++){
+                if(arr[j]<arr[min_index]){
+                    min_index=j;
+                }
+            }
+            int temp=arr[i];
+            arr[i]=arr[min_index];
+            arr[min_index]=temp;
+        }
+    }
+    public static void main (String args[]) {
         Scanner sc =new Scanner(System.in);
         int n=sc.nextInt();
-        int evensum=0;
-        int oddsum=0;
-        while(n>0){
-            if((n%10)%2==0){
-                evensum+=n%10;
-            }
-            else{
-                oddsum+=n%10;
-                n/=10;
-            }
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
         }
-        System.out.print(evensum);
-        System.out.print(oddsum);
+        selection_sort(arr,n);
+        for(int k=0;k<n;k++){
+            System.out.print(arr[k]+" ");
+        }
+
+
     }
 }
