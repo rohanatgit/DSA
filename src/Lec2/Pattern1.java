@@ -10,10 +10,10 @@ public class Pattern1 {
          int nst=n;//number of start in each row
          while(row<=n){
              //Start print
-             int cst=1;//count of star
-             while(cst<=nst){
+             int i=1;//count of star
+             while(i<=nst){
                  System.out.print("*"+" ");
-                 cst++;
+                 i++;
              }
              row++;
              //next row prep
