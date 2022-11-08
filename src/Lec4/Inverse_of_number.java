@@ -1,3 +1,5 @@
+package Lec4;
+
 public class Inverse_of_number {
     public static void main(String[] args) {
         int n=32145;
