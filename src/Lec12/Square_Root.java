@@ -1,25 +1,24 @@
-/*package Lec12;
+package Lec12;
 
-public class First_Bad_Vaersion {
+public class Square_Root {
     public static void main(String[] args) {
-
+        int n=47;
+        System.out.println(squareroot(n));
     }
-    public static int badversion(int n){
+    public static int squareroot(int n){
         int lo=1;
         int hi=n;
-        int ans=0;
+         int ans=0;
         while(lo<=hi){
             int mid=(lo+hi)/2;
-            if(badversion(mid)==true){
+            if(mid*mid<=n){
                 ans=mid;
-                hi=mid-1;
+                lo=mid+1;
             }
             else{
-                lo=mid+1;
+                hi=mid-1;
             }
         }
         return ans;
     }
-
 }
-*/
