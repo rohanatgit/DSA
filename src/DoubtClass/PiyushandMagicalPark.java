@@ -18,7 +18,7 @@ public class PiyushandMagicalPark {
                 if(arr[i][j]=='#'){
                    break;
                 }
-                if(j<arr[0].length){
+                if(j<arr[0].length-1){
                     s--;
                 }
             }
@@ -43,6 +43,7 @@ public class PiyushandMagicalPark {
                 arr[i][j]=sc.next().charAt(0);
             }
         }
+        maigicalPark(arr,k,s);
     }
 
 }
