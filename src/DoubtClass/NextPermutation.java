@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class NextPermutation {
     public static void nextper(int arr[]){
         int p=0;
-        for(int i=arr.length-2;i>=0;i--){
+        for(int i=arr.length- 2;i>=0;i--){
             if(arr[i]<arr[i+1]){
                 p=i;
                 break;
