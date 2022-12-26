@@ -9,7 +9,7 @@ public class Maximum_Sum_Path {
         int p=0;//arr start
         int q=0;//brr start
         int ans=0;
-        while(i<arr.length && j<arr.length){
+        while(i<arr.length && j<brr.length){
             if(arr[i]<arr[j]){
                 i++;
             }
