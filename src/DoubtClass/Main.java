@@ -1,62 +1,57 @@
 package DoubtClass;
 
-import java.util.*;;
-//import java.util.Arrays;
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        Scanner sc = new Scanner(System.in);
-        //	int t = sc.nextInt();
-        //	while (t-- > 0) {
-        int nos = sc.nextInt();
-        int noc = sc.nextInt();
-        int[] stalls = new int[nos];
-        for (int i = 0; i < stalls.length; i++) {
-            stalls[i] = sc.nextInt();
+    public static boolean itispossible(int pages[],int mid,int nos){
+        int i=0;
+        int page_read=0;
+        int student=1;
+        while(i<pages.length){
+            if(page_read+pages[i]<=mid){
+                page_read+=pages[i];
+                i++;
+            }
+            else{
+                student++;
+                page_read=0;
+            }
         }
-        Arrays.sort(stalls);
-        System.out.println(largestminimumdistance(stalls, noc));
-
-        //	}
-
+        if(student>nos){
+            return false;
+        }
+        return true;
     }
-
-    public static int largestminimumdistance(int[] stalls, int noc) {
-
-        int lo = 0;
-        int hi = stalls[stalls.length - 1] - stalls[0];
-        int ans = 0;
-        while (lo <= hi) {
-            int mid = (lo + hi) / 2;
-            if (isitpossible(stalls, mid, noc) == true) {
-                ans = mid;
-                lo = mid + 1;
-            } else {
-                hi = mid - 1;
+    public static int minimumpages(int pages[],int nos){
+        int lo=0;
+        int hi=0;
+        int ans=0;
+        for(int i=0;i<pages.length;i++){
+            hi=hi+pages[i];
+        }
+        while(lo<=hi){
+            int mid=(lo+hi)/2;
+            if(itispossible(pages,mid,nos)==true){
+                ans=mid;
+                hi=mid-1;
+            }
+            else{
+                lo=mid+1;
             }
         }
         return ans;
-
     }
-
-    public static boolean isitpossible(int[] stalls, int mid, int noc) {
-
-        int cow = 1;
-        int pos = stalls[0];
-        int i = 1;
-        while (i < stalls.length) {
-            if (stalls[i] - pos >= mid) {
-                cow++;
-                pos = stalls[i];
+    public static void main(String[] args) {
+        Scanner sc =new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+            int n=sc.nextInt();
+            int nos=sc.nextInt();
+            int pages[]=new int[n];
+            for(int i=0;i<pages.length;i++){
+                pages[i]=sc.nextInt();
             }
-
-            if (cow >= noc) {
-                return true;
-            }
-            i++;
+            System.out.println(minimumpages(pages,nos));
         }
-        return false;
-    }}
+    }
+}
