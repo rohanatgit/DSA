@@ -13,7 +13,7 @@ public class Aggressive_Cow {
                 cows++;
                 position=stall[i];
             }
-            if(cows>=noc){
+            if(cows==noc){
                 return true;
             }
             i++;
