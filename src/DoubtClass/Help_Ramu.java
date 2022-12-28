@@ -27,7 +27,7 @@ public class Help_Ramu {
             rickshow_ride+=Math.min(ricksha[i]*c1,c2);
         }
         for(int i=0;i<cabs.length;i++){
-            rickshow_ride+=Math.min(cabs[i]*c1,c2);
+            cab_ride+=Math.min(cabs[i]*c1,c2);
         }
         rickshow_ride=Math.min(rickshow_ride,c3);
         cab_ride=Math.min(cab_ride,c3);
