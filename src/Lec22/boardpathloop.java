@@ -9,7 +9,6 @@ public class boardpathloop {
          if(curr>end){
              return 0;
          }
-
 //        int fp=board_path(end,curr+1,ans+1);
 //        int sp=board_path(end,curr+2,ans+2);
 //        int tp=board_path(end,curr+3,ans+3);
