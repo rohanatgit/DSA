@@ -9,7 +9,6 @@ public class implementation {
         adjmatrix[u][v]=1;
         adjmatrix[v][u]=1;
     }
-
     public static void main(String[] args) {
         implementation g= new implementation(4);
         g.addEdge(0,1);
