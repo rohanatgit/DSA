@@ -3,9 +3,15 @@ package Lec27;
 import java.util.Scanner;
 
 public class Rat_Chases {
+    static boolean f=false;
     public static void printpath(char[][] maze,int cr,int cc,int [][] ans){
         if(cc==maze[0].length-1 && cr==maze.length-1 ){
-            display(ans);
+            if(maze[cr][cc]=='O') {
+                f=true;
+                ans[cr][cc]=1;
+                display(ans);
+                ans[cr][cc]=0;
+            }
             return ;
         }
         if(cc<0 || cc>=maze[0].length || cr<0 || cr>=maze.length||maze[cr][cc]=='X'){
@@ -38,6 +44,9 @@ public class Rat_Chases {
         }
         int[][] ans=new int[n][m];
         printpath(maze,0,0,ans);
+        if(f==false){
+            System.out.println("PATH NO FOUND");
+        }
     }
     public static void display(int [][] ans){
         for(int i=0;i<ans.length;i++){
