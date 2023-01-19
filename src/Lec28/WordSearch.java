@@ -34,6 +34,7 @@ public class WordSearch {
                 }
             }
         }
+        System.out.println(false);
 
     }
 }
