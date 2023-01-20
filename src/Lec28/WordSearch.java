@@ -8,8 +8,8 @@ public class WordSearch {
         if(cc<0 || cc>=maze[0].length || cr<0 || cr>=maze.length|| maze[cr][cc]!=word.charAt(idx)){
             return false;
         }
-        int [] r={-1,1,0,0};
-        int c[]={0,0,1,-1};
+        int [] r={-1,1,0,0,-1,1,1,-1};
+        int c[]={0,0,1,-1,1,1,-1,-1};
         maze[cr][cc]='*';
         for(int i=0;i<c.length;i++){
             boolean ans=findword(maze,cr+r[i],cc+c[i],word,idx+1);
