@@ -8,7 +8,7 @@ public class String_Builder_Demo2 {
 //        System.out.println(sb.capacity(()));
 //        ArrayList<Integer> al=new ArrayList<>();
 //        System.out.println(al);
-Stringprint();
+        Stringprint();
     }
     public static void Stringprint(){
         String s="";
