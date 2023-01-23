@@ -40,4 +40,7 @@ public class Merge_Two_Sorted_Array {
         }
     return ans;
     }
+    public static void sum(int a ,int b){
+        System.out.println(a+b);
+    }
 }
