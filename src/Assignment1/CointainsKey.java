@@ -15,6 +15,7 @@ public class CointainsKey {
         System.out.println("Is hashMap empty "+result);
         hm1.clear();
         result= hm1.isEmpty();
-        System.out.println("Is hashMap empty "+result);
+        System.out.println("Is hashMap empty "+result); result= hm1.isEmpty();
+
     }
 }
