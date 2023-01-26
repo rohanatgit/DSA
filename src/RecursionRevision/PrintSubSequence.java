@@ -18,3 +18,4 @@ public class PrintSubSequence {
         System.out.println(count);
     }
 }
+//static var -- global variable
