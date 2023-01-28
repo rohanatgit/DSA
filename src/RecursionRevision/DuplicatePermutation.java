@@ -17,6 +17,7 @@ public class DuplicatePermutation {
             for (int j = i + 1; j < ques.length(); j++) {
                 if (ques.charAt(j) == ch) {
                     flag = false;
+                    break;
                 }
             }
             if (flag == true) {
