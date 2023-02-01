@@ -22,5 +22,6 @@ public class GenerateParanthsis {
                List<String> list=new ArrayList<String>();
         generate(n,0,0,"",list);
         System.out.println(list);
+        //
     }
 }
