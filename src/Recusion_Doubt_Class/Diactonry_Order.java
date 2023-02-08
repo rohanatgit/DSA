@@ -10,7 +10,9 @@ public class Diactonry_Order {
     }
     public static void printpermutation(String ques,String ans ,String org){
         if(ques.length()==0){
-            System.out.println(ans);
+            if(ans.compareTo(org)>0) {
+                System.out.println(ans);
+            }
             return ;
         }
 
