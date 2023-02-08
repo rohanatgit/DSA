@@ -20,7 +20,7 @@ public class GenerateBinaryString {
         char ch=ques.charAt(0);
         if(ch=='?'){
             binaryString(ques.substring(1),ans+"0");
-            binaryString(ques.substring(1),ans+"1");;
+            binaryString(ques.substring(1),ans+"1");
         }
         else{
             binaryString(ques.substring(1),ans+ch);
