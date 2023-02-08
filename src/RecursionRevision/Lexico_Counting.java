@@ -2,14 +2,16 @@ package RecursionRevision;
 
 public class Lexico_Counting {
     public static void main(String[] args) {
-     int n=1000;
+     int n=13;
      printcount(0,n);
     }
     public static void printcount(int curr,int end){
         if(curr>end){
             return ;
         }
-        System.out.println(curr);
+        if(curr!=0) {
+            System.out.println(curr);
+        }
         int i=0;
         if(curr==0){
             i=1;
