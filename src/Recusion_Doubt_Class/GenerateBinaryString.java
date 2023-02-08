@@ -14,16 +14,16 @@ public class GenerateBinaryString {
     }
     public static void binaryString(String ques,String ans){
         if(ques.length()==0){
-            System.out.println(ans+" ");
+            System.out.print(ans+" ");
             return;
         }
         char ch=ques.charAt(0);
         if(ch=='?'){
-            binaryString(ques.substring(1),ans+'0');
-            binaryString(ques.substring(1),ans+'1');;
+            binaryString(ques.substring(1),ans+"0");
+            binaryString(ques.substring(1),ans+"1");;
         }
         else{
-            binaryString(ques,ans+ch);
+            binaryString(ques.substring(1),ans+ch);
         }
 
     }
