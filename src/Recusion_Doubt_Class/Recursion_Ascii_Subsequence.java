@@ -9,11 +9,12 @@ public class Recursion_Ascii_Subsequence {
           int t=sc.nextInt();
           while(t-->0){
               String str=sc.next();
+              printSubSeqnce(str,"");
           }
     }
     public static int printSubSeqnce(String ques,String ans){
         if(ques.length()==0){
-            System.out.println(ans);
+            System.out.print(ans+" ");
             return 1;
         }
 
