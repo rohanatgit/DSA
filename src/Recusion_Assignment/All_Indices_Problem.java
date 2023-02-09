@@ -11,11 +11,15 @@ public class All_Indices_Problem {
             arr[i]=sc.nextInt();
         }
         int tar=sc.nextInt();
+        find(arr,0,arr.length-1,tar);
     }
-    public static int find(int arr[],int tar){
-        if(arr.length==0){
-            return 0;
+    public static void find(int arr[],int lb,int ub,int tar){
+        if(lb>ub){
+            return ;
         }
-
+        if(arr[lb]==tar){
+            System.out.println(lb+" ");
+        }
+        find(arr,lb+1,ub,tar);
     }
 }
