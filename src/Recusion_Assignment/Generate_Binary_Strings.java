@@ -11,4 +11,17 @@ public class Generate_Binary_Strings {
 
         }
     }
+    public static void binaryString(String str ,String ans ){
+        if(str.length()==0){
+            System.out.println(ans+"");
+            return;
+        }
+        if(str.charAt(0)=='?'){
+            binaryString(str.substring(1),ans+0);
+            binaryString(str.substring(1),ans+1);
+        }
+        else{
+            binaryString(str.substring(1),ans+str.charAt(0));
+        }
+    }
 }
