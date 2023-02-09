@@ -10,6 +10,12 @@ public class All_Indices_Problem {
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
+        int tar=sc.nextInt();
+    }
+    public static int find(int arr[],int tar){
+        if(arr.length==0){
+            return 0;
+        }
 
     }
 }
