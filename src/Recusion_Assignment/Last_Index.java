@@ -21,6 +21,6 @@ public class Last_Index {
             System.out.println(ub+" ");
             return ;
         }
-        find(arr,lb+1,ub-1,tar);
+        find(arr,lb+1,ub-1,tar);;
     }
 }
