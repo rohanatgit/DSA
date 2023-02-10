@@ -35,7 +35,15 @@ public class Time_and_Space_Complexity {
             //0(log(n)) base 6
         }
         while(i<=n){
-
+            System.out.println("hiiii");
+            i/=2;
+            i/=3;
+            //0(log(n)) base 6
         }
+        while(i<=n){
+            System.out.println("hiihih");
+            //i+=k; 0(n/k)
+        }
+
     }
 }
