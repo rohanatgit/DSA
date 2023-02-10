@@ -28,6 +28,14 @@ public class Time_and_Space_Complexity {
             i+=3;
             //0(n)
         }
-        
+        while(i<=n){
+            System.out.println("kjsb");
+            i*=2;
+            i*=3;
+            //0(log(n)) base 6
+        }
+        while(i<=n){
+
+        }
     }
 }
