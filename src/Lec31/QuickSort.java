@@ -10,7 +10,7 @@ public class QuickSort {
         quickSort(arr,idx+1,hi);
     }
     public static void main(String[] args) {
-            int arr[]={9,1,56,-9,56,5,2,68,5,62,3,2,1,3,7};
+            int arr[]={9,1,56,-9,56,5,2,68,5,62,3,2,1,3,7};;;;;
             quickSort(arr,0,arr.length-1);
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
