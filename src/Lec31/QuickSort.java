@@ -1,19 +1,26 @@
 package Lec31;
 
 public class QuickSort {
+    public static void quickSort(int[] arr,int lo,int hi){
+        if(lo>=hi){
+            return ;
+        }
+        int idx=partition(arr,lo,hi);
+        quickSort(arr,lo,idx-1);
+        quickSort(arr,idx+1,hi);
+    }
     public static void main(String[] args) {
-            int arr[]={9,1,3,4,67,8,8,9,90};
-       int idx=index(arr,0,arr.length-1);
-        System.out.print(idx);
+            int arr[]={9,1,56,-9,56,5,2,68,5,62,3,2,1,3,7};
+            quickSort(arr,0,arr.length-1);
         for(int i=0;i<arr.length;i++){
             System.out.print(arr[i]+" ");
         }
     }
-    public static int index(int[] arr,int lo,int hi){
-        int last_element=arr[hi];
+    public static int partition(int[] arr,int lo,int hi){
+        int pivot=arr[hi];
         int idx=lo;
         for(int i=lo;i<hi;i++){
-            if(arr[i]<=last_element){
+            if(arr[i]<=pivot){
                 //i ,idx
                 int t=arr[i];
                 arr[i]=arr[idx];
