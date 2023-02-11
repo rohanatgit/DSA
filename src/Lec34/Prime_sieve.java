@@ -2,7 +2,7 @@ package Lec34;
 
 public class Prime_sieve {
     public static void main(String[] args) {
-        primesieve(300);
+        primesieve(2);
     }
     public static void primesieve(int n){
         //false ----> number prime
@@ -25,3 +25,4 @@ public class Prime_sieve {
         }
     }
 }
+//Time complexity --------------> nloglog(n)
