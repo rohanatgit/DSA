@@ -3,6 +3,7 @@ package Lec34;
 public class Palindrome_Substring {
     public static void main(String[] args) {
                String str="nitin";
+        System.out.println(countPalidrome(str));
     }
     public static int countPalidrome(String str){
         int count=0;
