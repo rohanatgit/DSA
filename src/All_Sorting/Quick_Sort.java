@@ -14,7 +14,7 @@ public class Quick_Sort {
         int arr[]={2,1,4,5,3};
         quick_Sort(arr,0,arr.length-1);
         for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
+            System.out.print(arr[i]+"  ");
         }
     }
     public static int partition(int arr[],int lo,int hi){
