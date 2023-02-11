@@ -5,11 +5,17 @@ public class MergeSort {
         int arr[]={2,1,3,1,4};
         int i=0;
         int j=arr.length-1;
+        int ans[]=mergeSort(arr,i,j);
+        for(int m=0;m<ans.length;m++){
+            System.out.print(ans[m]+" ");
+        }
     }
     public static int[] mergeSort(int arr[],int i,int j){
         int mid=(i+j)/2;
         if(i==j){
-
+         int a[]=new int[1];
+         a[0]=arr[i];
+         return a;
         }
         int arr1[]=mergeSort(arr,i,mid);
         int arr2[]=mergeSort(arr,mid+1,j);
