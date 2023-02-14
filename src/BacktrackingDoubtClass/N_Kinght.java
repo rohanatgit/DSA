@@ -3,15 +3,19 @@ package BacktrackingDoubtClass;
 import java.util.Scanner;
 
 public class N_Kinght {
+    static int c=0;
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         int n=sc.nextInt();
         boolean [][] board=new boolean[n][n];
         nknight(board,0,0,"",n);
+        System.out.println("\n"+c);
     }
     public static void nknight(boolean[][] board,int row,int col,String ans,int tn){
        if(tn==0){
            System.out.println(ans+" ");
+           c++;
+           return ;
        }
         if(col==board.length){
             row++;
