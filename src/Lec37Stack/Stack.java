@@ -24,7 +24,17 @@ public class Stack {
         this.top--;
         return this.data[top];
     }
-    public int peek(){
+    public int peek(){ //top element return
         return this.data[top-1];
     }
+    public int size(){
+        return this.top;
+    }
+    public void display(){
+        for(int i=0;i<top;i++){
+            System.out.println(this.data[i]+" ");
+        }
+        System.out.println();
+    }
+
 }
