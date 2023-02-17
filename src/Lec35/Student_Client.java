@@ -10,9 +10,9 @@ public class Student_Client {
         s.name="rohan";
         System.out.println(s.age);
         System.out.println(s.name);
-        s.age=89;
-        s.name="varshney";
-        System.out.println(s.age);
-        System.out.println(s.name);
+      Student s1=new Student();
+      s1.name="varshney";
+      s.age=9090;
+
     }
 }
