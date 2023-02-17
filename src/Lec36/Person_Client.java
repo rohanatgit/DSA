@@ -9,7 +9,6 @@ public class Person_Client {
         Person p1=new Person("bhadwa",76);
         p.name="Kunal";
         p.age=89;
-
         p.fun();
     }
 }
