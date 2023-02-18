@@ -24,7 +24,6 @@ public class Queue {
     public int size(){
         return this.size;
     }
-
     public void Enqueue(int item) throws Exception {
         if(isFull()){
             throw new Exception("sun pgl hai kya enqueue full ho gya hai bhai");
