@@ -29,21 +29,27 @@ public class Queue {
         if(isFull()){
             throw new Exception("sun pgl hai kya enqueue full ho gya hai bhai");
         }
-          this.data[this.size]=item;
-          this.size++;
+           int i=(this.size+this.front)%this.data.length;
+           this.data[i]=item;
+           this.size++;
     }
      public int dequeue() throws Exception {
         if(isEmpty()){
             throw new Exception("sun empty hai");
         }
         int rv=this.data[this.front];
-        this.front=this.front+1;
+        this.front=(this.front+1)%this.data.length;
         this.size--;
         return rv;
      }
      public int getFront(){
         return this.data[this.front];
      }
-
-
+     public void Display(){
+        for(int i=0;i<this.size;i++){
+            int idx=(this.front+i)%this.data.length;
+            System.out.println(this.data[idx]+" ");
+        }
+         System.out.println();
+     }
 }
