@@ -32,6 +32,18 @@ public class Queue {
           this.data[this.size]=item;
           this.size++;
     }
+     public int dequeue() throws Exception {
+        if(isEmpty()){
+            throw new Exception("sun empty hai");
+        }
+        int rv=this.data[this.front];
+        this.front=this.front+1;
+        this.size--;
+        return rv;
+     }
+     public int getFront(){
+        return this.data[this.front];
+     }
 
 
 }
