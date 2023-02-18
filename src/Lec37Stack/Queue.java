@@ -1,7 +1,7 @@
 package Lec37Stack;
 
 public class Queue {
-    public static void main(String[] args) {
+    private int[] data;
+    private int front=0;
 
-    }
 }
