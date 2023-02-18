@@ -11,7 +11,7 @@ public class Stack_Client {
         System.out.println(s.pop());
         s.display();
         System.out.println(s.peek());
-        s.push(90);
-        s.push(70);
+        s.push(60);
+       s.display();
     }
 }
