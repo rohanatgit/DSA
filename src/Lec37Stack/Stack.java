@@ -13,18 +13,27 @@ public class Stack {
     public boolean isEmpty(){
         return top==0;
     }
-    public void push(int item){
+    public void push(int item) throws Exception {
+        if(isFull()){
+            throw new Exception("Sun be pgl hai kya stack full ho gya ");
+        }
         this.data[this.top]=item;
         this.top++;
     }
     public boolean isFull(){
         return this.top==this.data.length;
     }
-    public int pop(){
+    public int pop() throws Exception {
+        if(isEmpty()){
+            throw new Exception("pgl hai, stack empty hai ");
+        }
         this.top--;
         return this.data[top];
     }
-    public int peek(){ //top element return
+    public int peek() throws Exception { //top element return
+        if(isEmpty()){
+            throw new Exception("pgl hai, stack empty hai ");
+        }
         return this.data[top-1];
     }
     public int size(){
