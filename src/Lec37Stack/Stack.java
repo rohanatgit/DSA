@@ -41,7 +41,7 @@ public class Stack {
     }
     public void display(){
         for(int i=0;i<top;i++){
-            System.out.println(this.data[i]+" ");
+            System.out.print(this.data[i]+" ");
         }
         System.out.println();
     }
