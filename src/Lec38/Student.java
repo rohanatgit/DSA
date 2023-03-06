@@ -13,9 +13,5 @@ public class Student {
         public String toString(){
         return this.name+" "+this.age;
         }
-
-        public static int Helo(){
-            System.out.println("My Name is NAme");
-        }
 }
 
