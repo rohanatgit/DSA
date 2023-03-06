@@ -2,7 +2,7 @@ package Lec37Stack;
 
 public class Stack {
     //pointer
-    private int [] data;
+    protected int [] data;
     private int top=0;
     public Stack(){
         this.data=new int[5];
