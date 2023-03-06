@@ -11,6 +11,7 @@ public class Dynamic_Queue extends Queue{
              this.data=arr;
              this.front=0;
         }
-        super.Enqueue(item);
+        super.
+                Enqueue(item);
     }
 }
