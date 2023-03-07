@@ -29,4 +29,3 @@ public class Stack_Using_Queue {
      public int peek(){
          return this.data.getFront();
      }
-}
