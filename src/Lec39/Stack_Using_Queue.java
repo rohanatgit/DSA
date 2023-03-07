@@ -10,5 +10,5 @@ public class Stack_Using_Queue {
      public boolean isEmpty(){
          return this.data.isEmpty();
      }
-     public in
+     public i
 }
