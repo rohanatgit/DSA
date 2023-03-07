@@ -10,7 +10,7 @@ public class Queue_Reverse {
         dq.Enqueue(30);
         dq.Enqueue(40);
         dq.Enqueue(50);
-        System.out.println(dq);
+        dq.Display();
         System.out.println("%%%%%%%%%%%%%%%%%%");
         reverse(dq);
     }
