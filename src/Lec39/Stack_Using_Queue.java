@@ -10,5 +10,23 @@ public class Stack_Using_Queue {
      public boolean isEmpty(){
          return this.data.isEmpty();
      }
-     public i
+     public int size(){
+         return this.data.size();
+     }
+     public void push(int item) throws Exception {
+         Dynamic_Queue temp=new Dynamic_Queue();
+         while(!this.data.isEmpty()){
+             temp.Enqueue(data.dequeue());
+         }
+         this.data.Enqueue(item);
+         while(!this.isEmpty()){
+             data.Enqueue(temp.dequeue());
+         }
+     }
+     public int pop() throws Exception {
+         return this.data.dequeue();
+     }
+     public int peek(){
+         return this.data.getFront();
+     }
 }
