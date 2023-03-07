@@ -1,6 +1,7 @@
 package Lec38;
 import Lec37Stack.Queue;
 public class Dynamic_Queue extends Queue{
+
     public void Enqueue(int item) throws Exception {
         if(super.isFull()){
              int arr[]=new int[2*super.data.length];
