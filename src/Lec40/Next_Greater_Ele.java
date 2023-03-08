@@ -18,5 +18,9 @@ public class Next_Greater_Ele {
             }
             st.push(i);
         }
+        while(!st.isEmpty()){
+            int ii=st.pop();
+            nge[ii]=-1;
+        }
     }
 }
