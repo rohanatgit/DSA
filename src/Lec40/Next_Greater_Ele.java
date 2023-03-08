@@ -20,7 +20,7 @@ public class Next_Greater_Ele {
         }
         while(!st.isEmpty()){
             int ii=st.pop();
-            nge[ii]=-1;
+            nge[ii]=-1
         }
     }
 }
