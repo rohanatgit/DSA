@@ -24,9 +24,9 @@ public class Histogram {
             }
             st.push(i);
         }
-       int r=arr.length;
-        while(!st.isEmpty()){
-          //  int r = i;
+        int r = arr.length;
+        while (!st.isEmpty()) {
+            //  int r = i;
             int h = arr[st.pop()];
             if (st.isEmpty()) {
                 ans = Math.max(ans, h * r);
@@ -35,5 +35,6 @@ public class Histogram {
                 ans = Math.max(ans, h * (r - l - 1));
             }
         }
-        return ans ;
+        return ans;
     }
+}
