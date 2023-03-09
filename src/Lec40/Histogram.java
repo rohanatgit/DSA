@@ -25,4 +25,3 @@ public class Histogram {
             st.push(i);
         }
         return ans;
-    }
