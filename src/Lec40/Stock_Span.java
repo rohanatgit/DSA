@@ -27,4 +27,3 @@ public class Stock_Span {
             System.out.println(arr[i]+" "+span[i]);
         }
     }
-}
