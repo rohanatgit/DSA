@@ -6,9 +6,7 @@ public class Stock_Span {
     public static void main(String[] args) {
         int arr[] = {91, 11, 13, 15, 38, 42, 37};
         Span_Cal(arr);
-
     }
-
     public static void Span_Cal(int arr[]) {
         int[] span = new int[arr.length];
         Stack<Integer> st = new Stack<>();
