@@ -5,6 +5,7 @@ import java.util.Stack;
 public class Histogram {
     public static void main(String[] args) {
         int arr[]={2,3,5,4,6,1,7};
+        System.out.println(Area(arr));
     }
  public static int Area(int arr[]){
         Stack<Integer> st=new Stack<Integer>();
@@ -17,10 +18,12 @@ public class Histogram {
                     ans=Math.max(ans,h*r);
                 }
                 else{
-
+                    int l=st.peek();
+                    ans=Math.max(ans,h*(r-l-1));
                 }
             }
             st.push(i);
         }
+        return ans;
     }
 }
