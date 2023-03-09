@@ -27,4 +27,3 @@ public class Next_Greater_Ele {
             System.out.println(arr[i]+" "+nge[i]);
         }
     }
-}
