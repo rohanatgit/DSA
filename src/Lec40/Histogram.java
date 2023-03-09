@@ -32,7 +32,7 @@ public class Histogram {
                 ans = Math.max(ans, h * r);
             } else {
                 int l = st.peek();
-                ans = Math.max(ans, h * (r - l - 1));
+                ans = Math.max(ans, h * (r - l - 1))
             }
         }
         return ans;
