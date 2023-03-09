@@ -37,3 +37,4 @@ public class Histogram {
         }
         return ans;
     }
+}
