@@ -32,4 +32,3 @@ public class Matrix_Search {
         int x=sc.nextInt();
         System.out.println(Search(arr,x));
     }
-}
