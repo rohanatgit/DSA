@@ -11,4 +11,3 @@ public class Pattern132 {
             min[i]=Math.min(min[i-1],arr[i]);
         }
     }
-}
