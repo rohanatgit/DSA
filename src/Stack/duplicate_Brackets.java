@@ -5,10 +5,10 @@ import java.util.Stack;
 
 public class duplicate_Brackets {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        String str=sc.nextLine();
-        Stack<Character> st=new Stack<>();
-        for(int i=0;i<str.length();i++) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        Stack<Character> st = new Stack<>();
+        for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
             if (ch == ')') {
                 if (st.peek() == '(') {
@@ -26,3 +26,4 @@ public class duplicate_Brackets {
         System.out.println(false);
     }
 
+}
