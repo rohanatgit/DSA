@@ -23,6 +23,7 @@ public class duplicate_Brackets {
                 st.push(ch);
             }
         }
+        System.out.println(false);
     }
 
 }
