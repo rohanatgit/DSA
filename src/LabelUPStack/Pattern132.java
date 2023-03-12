@@ -11,6 +11,6 @@ public class Pattern132 {
         for (int i = 1; i < min.length; i++) {
             min[i] = Math.min(min[i - 1], arr[i]);
         }
-        return true;
+
     }
 }
