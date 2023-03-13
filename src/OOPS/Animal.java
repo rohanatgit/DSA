@@ -13,8 +13,8 @@ public class Animal {
         bz.fly();
     }
 }
-class bird{
-    void fly(){
+class bird {
+    void fly() {
         System.out.println("I am flying");
     }
 }
