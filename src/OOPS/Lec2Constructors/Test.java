@@ -1,9 +1,10 @@
 package OOPS.Lec2Constructors;
 
 public class Test {
+    int i;
+    String name;
     public Test(){
-        String i="Rohan";
-        System.out.println(i);
+        System.out.println("Bhai");
     }
     public static void main(String[] args) {
         Test t =new Test();
