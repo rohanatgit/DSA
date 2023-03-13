@@ -8,6 +8,6 @@ public class Animal1 {
         Animal1 buzo =new Animal1();
         buzo.color="black";
         buzo.age=10;
-
+        System.out.println(buzo.color+" "+buzo.age);
     }
 }
