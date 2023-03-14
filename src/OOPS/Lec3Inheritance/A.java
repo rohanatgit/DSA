@@ -11,14 +11,15 @@ class B extends A{
     }
 
 }
-class C extends B{
-    void showC(){
+class C extends B {
+    void showC() {
         System.out.println("c class methord");
     }
 
     public static void main(String[] args) {
-        C cc=new C();
+        C cc = new C();
         cc.showA();
         cc.showB();
         cc.showC();
     }
+}
