@@ -22,4 +22,3 @@ class C extends B{
         cc.showB();
         cc.showC();
     }
-}
