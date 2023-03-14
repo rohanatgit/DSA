@@ -10,4 +10,4 @@ class Dog extends Animal{
         Dog d=new Dog();
         d.eat();
     }
-}
+
