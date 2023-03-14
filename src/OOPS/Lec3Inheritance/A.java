@@ -18,6 +18,8 @@ class C extends B{
 
     public static void main(String[] args) {
         C cc=new C();
-
+        cc.showA();
+        cc.showB();
+        cc.showC();
     }
 }
