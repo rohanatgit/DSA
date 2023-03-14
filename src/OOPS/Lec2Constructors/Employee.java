@@ -10,7 +10,5 @@ public class Employee {
     public static void main(String[] args) {
         Employee e1=new Employee("ram",10);
         Employee e2=new Employee("syhum",90);
-
-
     }
 }
