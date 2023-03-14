@@ -17,7 +17,5 @@ public class Animal1 {
 //        System.out.println(buzo.color+" "+buzo.age);
         buzo.initObj("black",20);
         buzo.display();
-
-
     }
 }
