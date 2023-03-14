@@ -10,12 +10,14 @@ class B extends A{
         System.out.println("b class methird");
     }
 
+}
+class C extends B{
+    void showC(){
+        System.out.println("c class methord");
+    }
+
     public static void main(String[] args) {
-        A ob1=new A();
-        ob1.showA();
-        //ob1.showB();
-        B ob2=new B();
-        ob2.showB();
-        ob2.showA();
+        C cc=new C();
+
     }
 }
