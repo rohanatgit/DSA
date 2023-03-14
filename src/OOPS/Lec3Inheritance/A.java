@@ -14,5 +14,8 @@ class B extends A{
         A ob1=new A();
         ob1.showA();
         //ob1.showB();
+        B ob2=new B();
+        ob2.showB();
+        ob2.showA();
     }
 }
