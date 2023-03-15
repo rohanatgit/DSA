@@ -5,9 +5,10 @@ import java.util.Stack;
 public class Pattern132 {
     public static void main(String[] args) {
         int arr[] = {3, 1, 4, 2};
+        System.out.println(pattern(arr));
     }
 
-    public boolean pattern(int arr[]) {
+    public static boolean pattern(int arr[]) {
         int[] min = new int[arr.length];
         min[0] = arr[0];
         for (int i = 1; i < min.length; i++) {
