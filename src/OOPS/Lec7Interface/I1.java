@@ -4,7 +4,7 @@ interface  I1 {
     void show();
 }
 interface I2{
-    void display();
+    void display(); 
 }
 class test implements I1,I2{
    public void show(){
