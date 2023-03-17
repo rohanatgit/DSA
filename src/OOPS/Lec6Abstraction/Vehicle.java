@@ -1,4 +1,4 @@
-package OOPS.Lec5Abstraction;
+package OOPS.Lec6Abstraction;
 
 abstract class Vehicle {
     abstract void start();
