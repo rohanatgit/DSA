@@ -1,7 +1,7 @@
 package OOPS.Lec12Final;
 
 public class Test {
-    final void m1(){
+     void m1(){
         System.out.println("i am in class Demo");
     }
 }
