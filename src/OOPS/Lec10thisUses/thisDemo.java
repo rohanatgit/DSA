@@ -1,16 +1,14 @@
 package OOPS.Lec10thisUses;
 
 public class thisDemo {
-
-     void display(){
+     thisDemo(){
          System.out.println("hello BHai");
      }
-     void show(){
-         this.display();
+     thisDemo(int a){
+         System.out.println("parametrized construtor");
      }
 
     public static void main(String[] args) {
         thisDemo td=new thisDemo();
-        td.show();
     }
 }
