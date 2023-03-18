@@ -13,5 +13,7 @@ public class Emp {
 class Company{
     public static void main(String[] args) {
         Emp e= new Emp();
+        e.setEmpid(101);
+        System.out.println(e.getEmpid());
     }
 }
