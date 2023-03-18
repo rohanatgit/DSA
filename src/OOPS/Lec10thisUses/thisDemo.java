@@ -5,6 +5,7 @@ public class thisDemo {
          System.out.println("hello BHai");
      }
      thisDemo(int a){
+         this();
          System.out.println("parametrized construtor");
      }
 
