@@ -3,7 +3,7 @@ package OOPS.Lec13StaticVariable;
 public class Employee {
     int empid;
     String name;
-    static String company;
+    static String company="sp";
     Employee(int empid ,String name,String company){
         this.empid=empid;
         this.name=name;
