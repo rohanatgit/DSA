@@ -9,15 +9,11 @@ public class Test {
 //        Test t =new Test();
 //        t.display();
         Test.display();//no need to create object
+        Xyz.show();
     }
 }
 class Xyz{
-     void show(){
+     static void show(){
         System.out.println("2");
-    }
-
-    public static void main(String[] args) {
-        Xyz x=new Xyz();
-        x.show();
     }
 }
