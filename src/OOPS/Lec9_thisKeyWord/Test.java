@@ -2,8 +2,8 @@ package OOPS.Lec9_thisKeyWord;
 
 public class Test {
     int i; //instance variable
-    void setvalue(int x){
-        i=x;
+    void setvalue(int i){
+       this.i=i;
     }
     void show(){
         System.out.println(i);
