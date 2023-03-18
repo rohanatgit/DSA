@@ -1,7 +1,7 @@
 package OOPS.Lec9_thisKeyWord;
 
 public class Test {
-    int i;
+    int i; //instance variable
     void setvalue(int x){
         i=x;
     }
