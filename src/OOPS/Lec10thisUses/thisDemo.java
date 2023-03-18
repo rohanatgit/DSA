@@ -1,17 +1,16 @@
 package OOPS.Lec10thisUses;
 
 public class thisDemo {
-     int i;
-     void setValue(int i){
 
+     void display(){
+         System.out.println("hello BHai");
      }
      void show(){
-         System.out.println(i);
+         this.display();
      }
 
     public static void main(String[] args) {
         thisDemo td=new thisDemo();
-        td.setValue(100);
         td.show();
     }
 }
