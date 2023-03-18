@@ -9,6 +9,6 @@ public class thisDemo {
      }
 
     public static void main(String[] args) {
-        thisDemo td=new thisDemo();
+        thisDemo td=new thisDemo(10);
     }
 }
