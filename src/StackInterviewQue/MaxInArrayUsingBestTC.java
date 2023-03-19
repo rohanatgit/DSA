@@ -7,7 +7,7 @@ public class MaxInArrayUsingBestTC {
     Stack<Integer>maxSt=new Stack<>();
     public void push(int data){
         int max=data;
-        if(!maxSt.isEmpty() && maxSt.peek()>max){
+        if(!maxSt.isEmpty() && maxSt.peek()<max){
             max=maxSt.peek();
         }
         st.push(data);
