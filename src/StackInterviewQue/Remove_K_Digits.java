@@ -25,7 +25,7 @@ public class Remove_K_Digits {
             st.pop();
         }
         StringBuilder sb =new StringBuilder();
-        for(int i=0;i<st.size();i++){
+        while(!st.isEmpty()){
             sb.append(st.pop());
         }
         sb.reverse();
