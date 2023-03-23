@@ -12,12 +12,12 @@ public class RevereseStack {
         insertAtlast(st,temp);
     }
     public static void insertAtlast(Stack<Integer> st ,int ele){
-        if(!st.isEmpty()){
+        if(st.isEmpty()){
             st.push(ele);
             return ;
         }
        int te=st.pop();
-        insertAtlast(st,te);
+        insertAtlast(st,ele);
         st.push(te);
     }
 
