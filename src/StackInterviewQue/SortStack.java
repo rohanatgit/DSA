@@ -8,6 +8,7 @@ public class SortStack {
             return ;
         }
         int temp=st.pop();
+        push(st);
         insertCorrectPos(st,temp);
     }
     public static void insertCorrectPos(Stack<Integer> st ,int temp){
