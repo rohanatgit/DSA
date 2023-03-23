@@ -22,4 +22,7 @@ public class StockSpan {
          return c;
      }
 
+    public static void main(String[] args) {
+
+    }
 }
