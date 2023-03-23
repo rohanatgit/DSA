@@ -8,6 +8,14 @@ public class RevereseStack {
             return ;
         }
         int temp=st.pop();
+        reverse(st);
+        insertAtlast(st,temp);
+    }
+    public static void insertAtlast(Stack<Integer> st ,int ele){
+        if(!st.isEmpty()){
+            st.push(ele);
+            return ;
+        }
 
     }
 }
