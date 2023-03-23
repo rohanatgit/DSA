@@ -20,4 +20,15 @@ public class RevereseStack {
         insertAtlast(st,te);
         st.push(te);
     }
+
+    public static void main(String[] args) {
+        Stack<Integer> st =new Stack<>();
+        st.add(4);
+        st.add(3);
+        st.add(2);
+        st.add(1);
+        System.out.println(st);
+        reverse(st);
+        System.out.println(st);
+    }
 }
