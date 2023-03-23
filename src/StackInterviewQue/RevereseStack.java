@@ -16,6 +16,7 @@ public class RevereseStack {
             st.push(ele);
             return ;
         }
+       int te=st.pop();
 
     }
 }
