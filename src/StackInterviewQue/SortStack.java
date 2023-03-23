@@ -8,6 +8,13 @@ public class SortStack {
             return ;
         }
         int temp=st.pop();
+        insertCorrectPos(st,temp);
+    }
+    public static void insertCorrectPos(Stack<Integer> st ,int temp){
+        if(st.isEmpty() || st.peek()<temp){
+            st.push(temp);
+            return ;
+        }
 
     }
 }
