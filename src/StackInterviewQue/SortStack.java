@@ -15,6 +15,19 @@ public class SortStack {
             st.push(temp);
             return ;
         }
+      int ele=st.pop();
+        insertCorrectPos(st,temp);
+        st.push(ele);
+    }
 
+    public static void main(String[] args) {
+        Stack<Integer> st =new Stack<>();
+        st.push(10);
+        st.push(1);
+        st.push(30);
+        st.push(20);
+        System.out.println(st);
+        push(st);
+        System.out.println(st);
     }
 }
