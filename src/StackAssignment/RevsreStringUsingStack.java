@@ -10,13 +10,14 @@ public class RevsreStringUsingStack {
         Stack<Character> st =new Stack<>();
         Scanner sc =new Scanner(System.in);
         String str=sc.next();
-        for(int i=0;i<str.length();i++){
+        char[]  ch =str.toCharArray();
+        for(int i=0;i<str.length();i++) {
             st.push(str.charAt(i));
         }
-        StringBuilder sb =new StringBuilder();
-        while(!st.isEmpty()){
-
-        }
+      for(int i=0;i<str.length();i++){
+          ch[i]=st.pop();
+      }
+        System.out.println( String.valueOf(ch));
 
     }
 }
