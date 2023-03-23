@@ -17,6 +17,7 @@ public class RevereseStack {
             return ;
         }
        int te=st.pop();
-
+        insertAtlast(st,te);
+        st.push(te);
     }
 }
