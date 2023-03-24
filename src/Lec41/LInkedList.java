@@ -16,7 +16,9 @@ public class LInkedList {
     public void addfirst(int item){
         Node nn =new Node(item);
         if(this.size==0){
-            return;
+            this.head=nn;
+            this.tail=nn;
+            this.size++;
         }
 
     }
