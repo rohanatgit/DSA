@@ -16,7 +16,7 @@ class Voting{
             throw new youngerAgeEx("Bhai kya kar raha hay tu age toh dhek le yaar kam se kam ");
         }
         else {
-            System.out.println("OK Success");
+            System.out.println("OK Success ");
         }
     }
 }
