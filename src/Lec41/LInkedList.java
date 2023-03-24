@@ -41,8 +41,10 @@ public class LInkedList {
 
     }
     //get
-    public int getfirst(){
-
+    public int getfirst() throws Exception {
+       if(head==null){
+           throw new Exception("pgl LINKEDLIST Khali hai nikal yha se ");
+       }
         return head.data;//head mai null hai toh null POINTER expception aayega
     }
 
