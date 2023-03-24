@@ -14,6 +14,9 @@ public class LInkedList {
     private int size;//Linked List m kitne node hai
     private Node tail;//Linked List ka last ka node
     public void addfirst(int item){
+        if(this.size==0){
+            return;
+        }
 
     }
 }
