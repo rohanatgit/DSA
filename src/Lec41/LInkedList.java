@@ -22,7 +22,8 @@ public class LInkedList {
         }
     else {
            nn.next=this.head;
-
+           this.head=nn;
+           this.size++;
         }
     }
 }
