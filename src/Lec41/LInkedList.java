@@ -26,6 +26,27 @@ public class LInkedList {
            this.size++;
         }
     }
+    public void addlast(int item){
+        if(this.size==0){
+            addfirst(item);
+        }
+        else{
+            Node nn =new Node(item);
+            this.tail.next=nn;
+            this.tail=nn;
+            this.size++;
+        }
+    }
+    public void addatindex(int item,int k){
+
+    }
+    //get
+    public int getfirst(){
+
+        return head.data;//head mai null hai toh null POINTER expception aayega
+    }
+
+    //
     public void display(){
                               // tail ka next mai null hota hai
         Node temp=this.head;
