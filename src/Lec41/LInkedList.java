@@ -21,9 +21,10 @@ public class LInkedList {
             this.size++;
         }
     else {
-           nn.next=this.head;
+           nn.next=this.head;//(taar ) jod deye hai (connection )
            this.head=nn;
            this.size++;
         }
     }
+    public void display()
 }
