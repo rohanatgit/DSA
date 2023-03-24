@@ -7,6 +7,5 @@ public class LInkedList {
         Node(int data){
             this.data=data;
         }
-
     }
 }
