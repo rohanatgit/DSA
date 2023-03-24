@@ -67,6 +67,13 @@ public class LInkedList {
        }
        return temp;
     }
+    public int removeFirst(){
+        Node temp=this.head;
+        this.head=this.head.next;
+        temp.next=null;
+        this.size--;
+        return temp.data;
+    }
     public void display(){
                               // tail ka next mai null hota hai
         Node temp=this.head;
