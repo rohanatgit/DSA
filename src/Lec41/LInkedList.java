@@ -8,4 +8,7 @@ public class LInkedList {
             this.data=data;
         }
     }
+    private Node head;// Phle Node ka address btayega
+    private int size;//Linked List m kitne node hai
+
 }
