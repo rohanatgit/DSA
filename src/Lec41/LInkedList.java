@@ -26,5 +26,7 @@ public class LInkedList {
            this.size++;
         }
     }
-    public void display()
+    public void display(){
+
+    }
 }
