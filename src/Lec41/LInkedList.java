@@ -27,6 +27,12 @@ public class LInkedList {
         }
     }
     public void display(){
-
+                              // tail ka next mai null hota hai
+        Node temp=this.head;
+        while(temp!=null){
+            System.out.println(temp.data+"->");
+            temp=temp.next;
+        }
+        System.out.println(".");
     }
 }
