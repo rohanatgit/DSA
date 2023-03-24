@@ -20,6 +20,9 @@ public class LInkedList {
             this.tail=nn;
             this.size++;
         }
+    else {
+           nn.next=this.head;
 
+        }
     }
 }
