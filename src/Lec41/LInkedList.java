@@ -12,5 +12,7 @@ public class LInkedList {
 
     private Node head;// Phle Node ka address btayega
     private int size;//Linked List m kitne node hai
-}
+    public void addfirst(int item){
+
+    }
 }
