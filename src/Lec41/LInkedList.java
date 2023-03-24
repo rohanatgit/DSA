@@ -54,11 +54,18 @@ public class LInkedList {
         }
         return this.tail.data;
     }
-    public int getAtindex(int k){
+    public int getAtindex(int k) throws Exception {
         return getnode(k).data;
     }
-    private Node getnode(int k){
-
+    private Node getnode(int k) throws Exception {
+       if(k<0 || k>=size){
+           throw new Exception("Index out of bound");
+       }
+       Node temp=this.head;
+       for(int i=0;i<k;i++){
+           temp=temp.next;
+       }
+       return temp;
     }
     public void display(){
                               // tail ka next mai null hota hai
