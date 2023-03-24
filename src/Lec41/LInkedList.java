@@ -54,6 +54,12 @@ public class LInkedList {
         }
         return this.tail.data;
     }
+    public int getAtindex(int k){
+        return getnode(k).data;
+    }
+    private Node getnode(int k){
+
+    }
     public void display(){
                               // tail ka next mai null hota hai
         Node temp=this.head;
