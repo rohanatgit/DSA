@@ -103,6 +103,7 @@ public class LInkedList {
             Node k_1th=getnode(k-1);
             k_1th.next=kth.next;
             kth.next=null;
+            this.size--;
             return kth.data;
         }
 
