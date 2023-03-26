@@ -74,6 +74,39 @@ public class LInkedList {
         this.size--;
         return temp.data;
     }
+    public int removelast() throws Exception {
+        if(this.head==null){
+            throw new Exception("pgl hai kya linked list khali hai");
+        }
+        if(this.size==1){
+            return removeFirst();
+        }
+        Node temp = getnode(this.size-2);
+        int rv=tail.data;//50
+        this.tail=temp;
+        this.tail.next=null;
+        this.size--;
+        return rv;
+    }
+    public int removeindex(int k) throws Exception {
+        if(k<0 || k>=size){
+            throw new Exception("Index out of bound pgl k ki value range m nhi hai ");
+        }
+        if(k==0){
+            return removeFirst();
+        }
+        else if(k==this.size-1){
+            return removelast();
+        }
+        else{
+            Node kth=getnode(k);
+            Node k_1th=getnode(k-1);
+            k_1th.next=kth.next;
+            kth.next=null;
+            return kth.data;
+        }
+
+    }
     public void display(){
                               // tail ka next mai null hota hai
         Node temp=this.head;
