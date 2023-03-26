@@ -12,5 +12,8 @@ public class LinkdedListClient {
         ll.display();
         ll.addlast(50);
         ll.display();
+        System.out.println(ll.removeindex(2));
+        ll.display();
+
     }
 }
