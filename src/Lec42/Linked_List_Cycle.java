@@ -33,5 +33,9 @@ public class Linked_List_Cycle {
           this.tail=nn;
           size++;
       }
+   public void CreateCycle(){
+          this.tail.next =this.head;//circular
+
+   }
 
 }
