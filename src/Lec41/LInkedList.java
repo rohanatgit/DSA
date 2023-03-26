@@ -120,7 +120,7 @@ public class LInkedList {
         else{
             Node nn =new Node (item);
             Node k_1th=getnode(k-1);
-            nn.next=k_1th;
+            nn.next=k_1th.next;
             k_1th.next=nn;
             this.size++;
         }
