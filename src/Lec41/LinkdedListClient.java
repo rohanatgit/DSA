@@ -10,5 +10,7 @@ public class LinkdedListClient {
         ll.addfirst(30);
         ll.addfirst(40);
         ll.display();
+        ll.addlast(50);
+        ll.display();
     }
 }
