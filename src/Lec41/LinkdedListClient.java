@@ -15,5 +15,6 @@ public class LinkdedListClient {
         System.out.println(ll.removeindex(2));
         ll.display();
         ll.addatindex(89,2);
+        ll.display();
     }
 }
