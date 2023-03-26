@@ -13,127 +13,298 @@ public class LInkedList {
     private Node head;// Phle Node ka address btayega
     private int size;//Linked List m kitne node hai
     private Node tail;//Linked List ka last ka node
-    public void addfirst(int item){
-        Node nn =new Node(item);
-        if(this.size==0){
-            this.head=nn;
-            this.tail=nn;
+
+    public void addfirst(int item) {
+        Node nn = new Node(item);
+        if (this.size == 0) {
+            this.head = nn;
+            this.tail = nn;
+            this.size++;
+        } else {
+            nn.next = this.head;//(taar ) jod deye hai (connection )
+            this.head = nn;
             this.size++;
         }
-    else {
-           nn.next=this.head;//(taar ) jod deye hai (connection )
-           this.head=nn;
-           this.size++;
-        }
     }
-    public void addlast(int item){
-        if(this.size==0){
+
+    public void addlast(int item) {
+        if (this.size == 0) {
             addfirst(item);
-        }
-        else{
-            Node nn =new Node(item);
-            this.tail.next=nn;
-            this.tail=nn;
+        } else {
+            Node nn = new Node(item);
+            this.tail.next = nn;
+            this.tail = nn;
             this.size++;
         }
     }
-    public void addatindex(int item,int k){
+
+    public void addatindex(int item, int k) {
 
     }
+
     //get
     public int getfirst() throws Exception {
-       if(this.head==null){
-           throw new Exception("pgl LINKEDLIST Khali hai nikal yha se ");
-       }
+        if (this.head == null) {
+            throw new Exception("pgl LINKEDLIST Khali hai nikal yha se ");
+        }
         return head.data;//head mai null hai toh null POINTER expception aayega
     }
+
     //getlast
     public int getlast() throws Exception {
-        if(this.head==null){
+        if (this.head == null) {
             throw new Exception("pgl hai kya yaar tu ");
         }
         return this.tail.data;
     }
+
     public int getAtindex(int k) throws Exception {
         return getnode(k).data;
     }
+
     private Node getnode(int k) throws Exception {
-       if(k<0 || k>=size){
-           throw new Exception("Index out of bound");
-       }
-       Node temp=this.head;
-       for(int i=0;i<k;i++){
-           temp=temp.next;
-       }
-       return temp;
+        if (k < 0 || k >= size) {
+            throw new Exception("Index out of bound");
+        }
+        Node temp = this.head;
+        for (int i = 0; i < k; i++) {
+            temp = temp.next;
+        }
+        return temp;
     }
-    public int removeFirst(){
-        Node temp=this.head;
-        this.head=this.head.next;
-        temp.next=null;
+
+    public int removeFirst() {
+        Node temp = this.head;
+        this.head = this.head.next;
+        temp.next = null;
         this.size--;
         return temp.data;
     }
+
     public int removelast() throws Exception {
-        if(this.head==null){
+        if (this.head == null) {
             throw new Exception("pgl hai kya linked list khali hai");
         }
-        if(this.size==1){
+        if (this.size == 1) {
             return removeFirst();
         }
-        Node temp = getnode(this.size-2);
-        int rv=tail.data;//50
-        this.tail=temp;
-        this.tail.next=null;
+        Node temp = getnode(this.size - 2);
+        int rv = tail.data;//50
+        this.tail = temp;
+        this.tail.next = null;
         this.size--;
         return rv;
     }
+
     public int removeindex(int k) throws Exception {
-        if(k<0 || k>=size){
+        if (k < 0 || k >= size) {
             throw new Exception("Index out of bound pgl k ki value range m nhi hai ");
         }
-        if(k==0){
+        if (k == 0) {
             return removeFirst();
-        }
-        else if(k==this.size-1){
+        } else if (k == this.size - 1) {
             return removelast();
-        }
-        else{
-            Node kth=getnode(k);
-            Node k_1th=getnode(k-1);
-            k_1th.next=kth.next;
-            kth.next=null;
+        } else {
+            Node kth = getnode(k);
+            Node k_1th = getnode(k - 1);
+            k_1th.next = kth.next;
+            kth.next = null;
             this.size--;
             return kth.data;
         }
     }
-    public void atanyindexinsert(int k,int item) throws Exception {
-        if(k<0 || k>size) {
+
+    public void atanyindexinsert(int k, int item) throws Exception {
+        if (k < 0 || k > size) {
             throw new Exception("Index out of bound pgl k ki value range me de");
         }
-        if(k==0){
+        if (k == 0) {
             addfirst(item);
-        }
-        else if(k==this.size){
-           addlast(item);
-        }
-        else{
-            Node nn =new Node (item);
-            Node k_1th=getnode(k-1);
-            nn.next=k_1th.next;
-            k_1th.next=nn;
+        } else if (k == this.size) {
+            addlast(item);
+        } else {
+            Node nn = new Node(item);
+            Node k_1th = getnode(k - 1);
+            nn.next = k_1th.next;
+            k_1th.next = nn;
             this.size++;
         }
 
 
     }
-    public void display(){
+
+    public void display() {
         // tail ka next mai null hota hai
-        Node temp=this.head;
-        while(temp!=null){
-            System.out.print(temp.data+"->");
-            temp=temp.next;
+        Node temp = this.head;
+        while (temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
         }
         System.out.println(".");
     }
 }
+//}
+//public class LinkedList {
+//
+//    public class Node {
+//        int data;
+//        Node next;
+//
+//        public Node(int data) {
+//            // TODO Auto-generated constructor stub
+//            this.data = data;
+//        }
+//
+//    }
+//
+//    private Node head;
+//    private int size;
+//    private Node tail;
+//
+//    public void addfrist(int item) {
+//
+//        Node nn = new Node(item);
+//        if (this.size == 0) {
+//            this.head = nn;
+//            this.tail = nn;
+//            this.size++;
+//
+//        } else {
+//            nn.next = this.head;
+//            this.head = nn;
+//            this.size++;
+//
+//        }
+//
+//    }
+//
+//    public void addlast(int item) {
+//        if (this.size == 0) {
+//            addfrist(item);
+//        } else {
+//            Node nn = new Node(item);
+//            this.tail.next = nn;
+//            this.tail = nn;
+//            this.size++;
+//        }
+//
+//    }
+//
+//    public void addatindex(int item, int k) throws Exception {
+//
+//        if (k < 0 || k > size) {
+//            throw new Exception("Index out of Bound pgl k ki value range me de");
+//        }
+//        if (k == 0) {
+//
+//            addfrist(item);
+//        } else if (k == size) {
+//            addlast(item);
+//        } else {
+//            Node nn = new Node(item);
+//            Node k_1th = GetNode(k - 1);
+//            nn.next = k_1th.next;
+//            k_1th.next = nn;
+//            this.size++;
+//
+//        }
+//
+//    }
+//
+//    // get
+//
+//    public int getfirst() throws Exception {
+//        if (this.head == null) {
+//            throw new Exception("pgl Linkedlsit khaali hai");
+//        }
+//
+//        return this.head.data;
+//    }
+//
+//    public int getlast() throws Exception {
+//        if (this.head == null) {
+//            throw new Exception("pgl Linkedlsit khaali hai");
+//        }
+//
+//        return this.tail.data;
+//    }
+//
+//    public int getatindex(int k) throws Exception {
+//
+//        return GetNode(k).data;
+//
+//    }
+//
+//    private Node GetNode(int k) throws Exception {
+//        if (k < 0 || k >= size) {
+//            throw new Exception("Index out of Bound pgl k ki value range me de");
+//        }
+//        Node temp = head;
+//        for (int i = 1; i <= k; i++) {
+//            temp = temp.next;
+//
+//        }
+//        return temp;
+//
+//    }
+//
+//    public int removeFisrt() throws Exception {
+//        if (this.head == null) {
+//            throw new Exception("pgl Linkedlsit khaali hai");
+//        }
+//        Node temp = this.head;
+//        this.head = this.head.next;
+//        temp.next = null;
+//        this.size--;
+//        return temp.data;
+//
+//    }
+//
+//    public int removelast() throws Exception {
+//        if (this.head == null) {
+//            throw new Exception("pgl Linkedlsit khaali hai");
+//        }
+//        if (this.size == 1) {
+//            return removeFisrt();
+//        }
+//
+//        Node temp = GetNode(this.size - 2);// 40
+//        int rv = tail.data;// 50
+//        this.tail = temp;
+//        this.tail.next = null;
+//        this.size--;
+//        return rv;
+//
+//    }
+//
+//    public int removeatindex(int k) throws Exception {
+//        if (k < 0 || k >= size) {
+//            throw new Exception("Index out of Bound pgl k ki value range me de");
+//        }
+//
+//        if (k == 0) {
+//            return removeFisrt();
+//        } else if (k == this.size - 1) {
+//            return removelast();
+//        } else {
+//            Node kth = GetNode(k);
+//            Node k_1th = GetNode(k - 1);
+//            k_1th.next = kth.next;
+//            kth.next = null;
+//            this.size--;
+//            return kth.data;
+//
+//        }
+//
+//    }
+//
+//    public void Display() {
+//        Node temp = this.head;
+//        while (temp != null) {
+//            System.out.print(temp.data + "-->");
+//            temp = temp.next;
+//        }
+//        System.out.println(".");
+//    }
+//
+//}
