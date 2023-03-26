@@ -43,7 +43,7 @@ public class Linked_List_Cycle {
     }
 
     public boolean hasCycle(ListNode head) {
-
+                h h h h h h h h h h
        return true;
     }
 public void display()
