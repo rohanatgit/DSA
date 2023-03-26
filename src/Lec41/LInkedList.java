@@ -106,10 +106,29 @@ public class LInkedList {
             this.size--;
             return kth.data;
         }
+    }
+    public void atanyindexinsert(int k,int item) throws Exception {
+        if(k<0 || k>size) {
+            throw new Exception("Index out of bound pgl k ki value range me de");
+        }
+        if(k==0){
+            addfirst(item);
+        }
+        else if(k==this.size){
+           addlast(item);
+        }
+        else{
+            Node nn =new Node (item);
+            Node k_1th=getnode(k-1);
+            nn.next=k_1th;
+            k_1th.next=nn;
+            this.size++;
+        }
+
 
     }
     public void display(){
-                              // tail ka next mai null hota hai
+        // tail ka next mai null hota hai
         Node temp=this.head;
         while(temp!=null){
             System.out.print(temp.data+"->");
