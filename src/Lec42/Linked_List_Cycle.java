@@ -1,21 +1,21 @@
 package Lec42;
 
 public class Linked_List_Cycle {
-    public class Node {
+    public class ListNode {
         int data;
-        Node next;
+        ListNode next;
 
-        public Node(int data) {
+        public ListNode(int data) {
             this.data = data;
         }
     }
 
-    private Node head;
+    private ListNode head;
     private int size;
-    private Node tail;
+    private ListNode tail;
 
     public void addfirst(int item) {
-        Node nn = new Node(item);
+        ListNode nn = new ListNode(item);
         if (this.size == 0) {
             this.head = nn;
             this.tail = nn;
@@ -31,7 +31,7 @@ public class Linked_List_Cycle {
         if (this.size == 0) {
             addfirst(item);
         }
-        Node nn = new Node(item);
+        ListNode nn = new ListNode(item);
         this.tail.next = nn;
         this.tail = nn;
         size++;
@@ -39,7 +39,7 @@ public class Linked_List_Cycle {
 
     public void CreateCycle() {
         this.tail.next = this.head;//circular
-
+        this.tail.next = this.head.next;//cycle
     }
 
     public boolean hasCycle(ListNode head) {
@@ -48,7 +48,7 @@ public class Linked_List_Cycle {
     }
 public void display()
 {
-    Node temp=this.head;
+    ListNode temp=this.head;
     while(temp!=null){
         System.out.println(temp.data+"-->");
         temp=temp.next;
