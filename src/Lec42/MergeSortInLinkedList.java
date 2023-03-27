@@ -26,7 +26,7 @@ public class MergeSortInLinkedList {
             ListNode headb =mid.next;
             mid.next=null;
             ListNode A=sortList(head);
-            ListNode B =sortList(head);
+            ListNode B =sortList(headb);
 
         }
   }
