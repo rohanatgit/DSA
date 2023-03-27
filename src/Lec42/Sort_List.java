@@ -71,9 +71,7 @@ public class Sort_List {
                 temp.next = list1;
             }
             return Dummy.next;
-
         }
-
     }
 
 }
