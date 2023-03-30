@@ -17,7 +17,7 @@ public static ListNode middle(ListNode head){
         }
         ListNode slow=head;
         ListNode fast=head;
-        while(fast!=null || fast.next==null){
+        while(fast!=null && fast.next==null){
             fast=fast.next.next;
             slow=slow.next;
         }
@@ -33,6 +33,6 @@ public static ListNode middle(ListNode head){
             prev=prev.next;
         }
         ListNode head =middle(dummy.next);
-        System.out.println(head.val);
+       // System.out.println(middle(dummy.next.val));
     }
 }
