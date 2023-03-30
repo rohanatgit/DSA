@@ -32,6 +32,7 @@ public class sigregateEvenodd {
             curr=curr.next;
         }
         eventail.next=dummyodd.next;
+        oddtail.next=null;
         return dummyEven.next;
     }
     public static void main(String[] args) {
