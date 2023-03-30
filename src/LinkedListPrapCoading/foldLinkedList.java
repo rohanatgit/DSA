@@ -25,8 +25,8 @@ public class foldLinkedList {
         ListNode dummy=new ListNode(-1);
         ListNode prev=dummy;
         while(n-->0){
-
+           prev.next=new ListNode(sc.nextInt());
+           prev=prev.next;
         }
     }
-
 }
