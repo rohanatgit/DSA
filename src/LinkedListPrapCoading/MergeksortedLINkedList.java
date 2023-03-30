@@ -12,7 +12,12 @@ public class MergeksortedLINkedList {
        }
 
    }
-
+public static void printList(ListNode node){
+       while(node!=null){
+           System.out.println(node.val+" ");
+           node =node.next;
+       }
+}
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         int n =sc.nextInt();
