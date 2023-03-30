@@ -24,6 +24,30 @@ public static ListNode midNode(ListNode head) {
     }
     return slow;
 }
+public static void flod(ListNode head){
+        if(head==null || head.next==null){
+            return ;
+        }
+        ListNode mid=midNode(head);
+        ListNode nhead=mid.next;
+        mid.next=null;
+        nhead=reverseLL(nhead);
+        ListNode c1=head;
+        ListNode c2=nhead;
+        ListNode f1=null;
+        ListNode f2=null;
+        while(c1!=null && c2!=null){
+            //backup
+            f1=c1.next;
+            f2=c2.next;
+            //Links
+            c1.next=c2;
+            c2.next=f1;
+            //Move
+            c1=f1;
+            c2=f2;
+        }
+}
 public static ListNode reverseLL(ListNode head){
         if(head==null || head.next==null){
             return head;
