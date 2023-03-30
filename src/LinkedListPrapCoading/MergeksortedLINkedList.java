@@ -12,6 +12,32 @@ public class MergeksortedLINkedList {
        }
 
    }
+   public static  ListNode mergetwoSortedLinkedList(ListNode l1,ListNode l2){
+//       ListNode temp=new ListNode(-1);
+       ListNode dummy=new ListNode (-1);
+       ListNode temp=dummy;
+       while(l1!=null && l2!=null){
+           if(l1.val<l2.val){
+               temp.next=l1;
+               temp=temp.next;
+               l1=l1.next;
+           }
+           else{
+               temp.next=l2;
+               temp=temp.next;
+               l2=l2.next;
+           }
+       }
+       if(l1==null){
+           temp.next=l2;
+           temp=temp.next;
+       }
+       if(l2==null){
+           temp.next=l1;
+           temp=temp.next;
+       }
+       return dummy.next;
+   }
 public static void printList(ListNode node){
        while(node!=null){
            System.out.println(node.val+" ");
