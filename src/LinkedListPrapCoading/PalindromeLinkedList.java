@@ -22,6 +22,21 @@ public class PalindromeLinkedList {
         }
         return slow;
     }
+    public static ListNode reverse(ListNode head){
+        if(head==null || head.next==null){
+            return head;
+        }
+        ListNode prev=null;
+        ListNode curr=head;
+        ListNode forwd=null;
+        while(curr!=null){
+            forwd =curr.next;//backup
+            prev=curr.next;
+            prev=curr;
+            curr=forwd;
+        }
+        return prev;
+    }
     public static void main(String[] args){
         Scanner sc =new Scanner(System.in);
         int n =sc.nextInt();
