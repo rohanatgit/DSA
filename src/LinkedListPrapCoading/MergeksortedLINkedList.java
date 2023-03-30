@@ -44,6 +44,24 @@ public static void printList(ListNode node){
            node =node.next;
        }
 }
+   public static ListNode mergekLists(ListNode[] lists,int si,int ei){
+       if(si>ei){
+           return null;
+       }
+       if(si==ei){
+           return lists[si];
+       }
+       int mid=(si+ei)/2;
+       ListNode l1=mergekLists(lists,si,mid);
+       ListNode l2=mergekLists(lists,mid+1,ei);
+       return mergetwoSortedLinkedList(l1,l2);
+}
+public static ListNode mergeKLits(ListNode[] lists){
+       if(lists.length==0){
+           return null;
+       }
+       return mergekLists(lists,0,lists.length-1);
+}
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
         int n =sc.nextInt();
