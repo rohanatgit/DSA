@@ -31,11 +31,34 @@ public class PalindromeLinkedList {
         ListNode forwd=null;
         while(curr!=null){
             forwd =curr.next;//backup
-            prev=curr.next;
+            curr.next=prev;//link
             prev=curr;
             curr=forwd;
         }
         return prev;
+    }
+    public static boolean isPalindrome(ListNode head){
+        if(head==null || head.next==null){
+            return true;
+        }
+        ListNode mid=midNode(head);
+        ListNode nhead=mid.next;
+        mid.next=null;
+        nhead=reverse(nhead);
+        ListNode c1=head;
+        ListNode c2=nhead;
+        boolean result=true;
+        while(c1!=null && c2!=null){
+            if(c1.val!=c2.val){
+                result=false;
+                break;
+            }
+            c1=c1.next;
+            c2=c2.next;
+        }
+        nhead=reverse(nhead);
+        mid.next=nhead;
+        return result;
     }
     public static void main(String[] args){
         Scanner sc =new Scanner(System.in);
@@ -46,6 +69,6 @@ public class PalindromeLinkedList {
             prev.next=new ListNode (sc.nextInt());
             prev=prev.next;
         }
-        System.out.println(ispalidrome(dumm.next));
+        System.out.println(isPalindrome(dummy.next));
     }
 }
