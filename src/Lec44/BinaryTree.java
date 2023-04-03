@@ -11,6 +11,6 @@ public class BinaryTree {
           this.root=CreateTree();
       }
       private Node CreateTree(){
-          return null;
+
       }
 }
