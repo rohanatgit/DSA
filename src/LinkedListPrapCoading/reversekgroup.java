@@ -22,7 +22,37 @@ public class reversekgroup {
                th=node;
            }
        }
-
+       public static ListNode reverseKGroup(ListNode head,int k){
+           if(head==null || head.next==null || k==0 ){
+               return head;
+           }
+           ListNode oh =null;
+           ListNode ot=null;
+           int len=length(head);
+           ListNode curr=head;
+           while(len>=k){
+               int tempk=k;
+               while(tempk-->0){
+                   ListNode ford=curr.next;
+                   curr.next=null;
+                   addFirstNode(curr);
+                   curr=ford;
+               }
+               if(oh==null){
+                   oh=th;
+                   ot=tt;
+               }
+               else{
+                   ot.next=th;
+                   ot=tt;
+               }
+               th=null;
+               tt=null;
+               len-=k;
+           }
+           ot.next=curr;
+           return oh;
+       }
        public static int length(ListNode node){
            ListNode curr=node;
            int len=0;
@@ -40,7 +70,6 @@ public class reversekgroup {
        }
        public static ListNode createList(int n){
            Scanner sc =new Scanner(System.in);
-
            ListNode dummy=new ListNode (-1);
            ListNode prev=dummy;
            while(n-->0){
