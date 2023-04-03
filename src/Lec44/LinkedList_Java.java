@@ -14,6 +14,7 @@ public class LinkedList_Java {
         list.add(60);//add last
         System.out.println(list);
         System.out.println(list.remove());//remove first
-
     }
 }
+
+//Add first and remo
