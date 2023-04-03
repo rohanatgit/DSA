@@ -17,5 +17,9 @@ public class BinaryTree {
         int item=sc.nextInt();
         Node nn=new Node();
         nn.data=item;
+        boolean hasleftchild=sc.nextBoolean();
+        if(hasleftchild==true){
+
+        }
       }
 }
