@@ -17,4 +17,8 @@ public class LinkedList_Java {
     }
 }
 
-//Add first and remo
+//Add first  and remove first = stack
+//queue ---LinkedList lege
+
+//Linked List ki madat se stack banao
+//Answer=add first and remove first karne se stack hamara stack ki tarah behaviour karega
