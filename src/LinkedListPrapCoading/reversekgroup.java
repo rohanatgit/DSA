@@ -10,6 +10,28 @@ public class reversekgroup {
                this.val=val;
            }
        }
+      static  ListNode th=null;
+       static  ListNode tt=null;
+       public static void addFirstNode(ListNode node){
+           if(th==null){
+               th=node;
+               tt=node;
+           }
+           else{
+               node .next=th;
+               th=node;
+           }
+       }
+
+       public static int length(ListNode node){
+           ListNode curr=node;
+           int len=0;
+           while(curr!=null){
+               curr=curr.next;
+               len++;
+           }
+           return len;
+    }
        public static void printList(ListNode node){
            while(node !=null){
                System.out.println(node.val+" ");
