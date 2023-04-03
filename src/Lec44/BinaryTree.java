@@ -15,6 +15,7 @@ public class BinaryTree {
       }
       private Node CreateTree(){
         int item=sc.nextInt();
+        Node nn=new Node();
 
       }
 }
