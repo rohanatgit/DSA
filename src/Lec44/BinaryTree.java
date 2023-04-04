@@ -9,7 +9,7 @@ public class BinaryTree {
           Node left;
           Node right;
       }
-      public Node root;
+      private Node root;
       public BinaryTree(){
           this.root=CreateTree();
       }
