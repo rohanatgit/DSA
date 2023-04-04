@@ -65,6 +65,14 @@ public class BinaryTree {
           return find(this.root,item);
       }
       private boolean find(Node nn,int item){
+          if(nn==null){
+              return false;
+          }
+        if(nn.data==item)
+        {
+            return true;
+        }
+        return find(nn.left,item) || find(nn.right,item);
 
       }
 
