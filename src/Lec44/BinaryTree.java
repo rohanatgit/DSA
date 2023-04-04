@@ -27,4 +27,16 @@ public class BinaryTree {
         }
         return nn;
       }
+      public void Display(Node nn){
+          String str="";
+          str=str+nn.data;
+          str="<---"+str+"--->";
+          if(nn.left!=null){
+              str=nn.left.data+str;
+          }
+          else{
+              str="."+str;
+          }
+
+      }
 }
