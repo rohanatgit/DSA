@@ -19,11 +19,11 @@ public class BinaryTree {
         nn.data=item;
         boolean hasleftchild=sc.nextBoolean();
         if(hasleftchild==true){
-               nn.left=CreateTree();
+               nn.left=CreateTree();//left subtree
         }
         boolean hasrightchild=sc.nextBoolean();
         if(hasrightchild==true){
-            nn.right=CreateTree();
+            nn.right=CreateTree();//right subtree
         }
         return nn;
       }
