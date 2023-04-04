@@ -37,6 +37,14 @@ public class BinaryTree {
           else{
               str="."+str;
           }
-
+          if(nn.right!=null){
+              str=str+nn.right.data;
+          }
+          else{
+              str=str+".";
+          }
+          System.out.println(str);
+          Display(nn.left);
+          Display(nn.right);
       }
 }
