@@ -61,4 +61,11 @@ public class BinaryTree {
           int rmax=max(node.right);
           return Math.max(lmax,Math.max(rmax,node.data));
       }
+      public boolean find(int item){
+          return find(this.root,item);
+      }
+      private boolean find(Node nn,int item){
+
+      }
+
 }
