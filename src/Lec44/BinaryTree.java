@@ -27,6 +27,9 @@ public class BinaryTree {
         }
         return nn;
       }
+      public void Display(){
+          Display(this.root);
+      }
       public void Display(Node nn){
           String str="";
           str=str+nn.data;
@@ -44,7 +47,18 @@ public class BinaryTree {
               str=str+".";
           }
           System.out.println(str);
-          Display(nn.left);
-          Display(nn.right);
+          Display(nn.left);//left subtree visite
+          Display(nn.right);//right subtree visite
+      }
+      public int max(){
+         return  max(this.root);
+      }
+      private int max(Node node){
+          if(node ==null){
+              return Integer.MIN_VALUE;
+          }
+          int lmax=max(node .left);
+          int rmax=max(node.right);
+          return Math.max(lmax,Math.max(rmax,node.data));
       }
 }
