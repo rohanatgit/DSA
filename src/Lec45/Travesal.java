@@ -29,4 +29,16 @@ public class Travesal {
          }
          return nn;
      }
+     public void PreOrder(){
+         PreOrder(this.root);
+         System.out.println();
+     }
+     private void PreOrder(Node node){
+         if(node ==null){
+             return ;
+         }
+         System.out.println(node.data+" ");
+         PreOrder(node.left);
+         PreOrder(node.right);
+     }
 }
