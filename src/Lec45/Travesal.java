@@ -41,4 +41,34 @@ public class Travesal {
          PreOrder(node.left);
          PreOrder(node.right);
      }
+     public void postOrder(){
+         postorder(this.root);
+         return ;
+     }
+     private void postorder(Node node){
+         if(node ==null){
+             return ;
+         }
+         postorder(node.left);
+         postorder(node.right);
+         System.out.println(node.data+" ");
+     }
+   public void Inorder(){
+         inorder(this.root);
+         return ;
+   }
+   private void inorder(Node node){
+         if(node==null){
+           return ;
+       }
+         inorder(node.left);
+       System.out.println(node.data+" ");
+         inorder(node.right);
+
+   }
+    public static void main(String[] args) {
+        Travesal tt =new Travesal();
+        tt.postOrder();
+        tt.PreOrder();
+    }
 }
