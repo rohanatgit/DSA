@@ -75,5 +75,17 @@ public class BinaryTree {
         return find(nn.left,item) || find(nn.right,item);
 
       }
-
+      public int ht(){
+          //maximum diff between root to leaf
+          //single node size hmm 0 manege
+          return ht(this.root);
+      }
+      private int ht(Node node){
+     if(node==null){
+         return -1;
+     }
+          int lh=ht(node.left);
+          int rh=ht(node.right);
+          return Math.max(lh,rh)+1;
+      }
 }
