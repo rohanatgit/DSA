@@ -1,7 +1,9 @@
 package Lec45;
 
+import Lec37Stack.Queue;
 import Lec44.BinaryTree;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Travesal {
@@ -64,11 +66,27 @@ public class Travesal {
          inorder(node.left);
        System.out.println(node.data+" ");
          inorder(node.right);
-
+   }
+   public void levelOrder(){
+       LinkedList<Node> queue=new LinkedList<>();
+//       Queue<Node>queue=new LinkedList<>();
+       queue.add(this.root);//add last
+       while(!queue.isEmpty()){
+           Node rv =queue.remove();//remove first
+           System.out.println(rv.data+" ");
+           if(rv.left!=null){
+               queue.add(rv.left);
+           }
+           if(rv.right!=null){
+               queue.add(rv.right);
+           }
+       }
+       System.out.println();
    }
     public static void main(String[] args) {
         Travesal tt =new Travesal();
         tt.postOrder();
         tt.PreOrder();
+        tt.Inorder();
     }
 }
