@@ -22,7 +22,16 @@ public class Opti_Binary_tree {
             return diameter(root).d;
         }
         public DiaPair diameter(TreeNode root){
-
+           if(root==null){
+               return null;
+           }
+        DiaPair ldp=diameter(root.left);
+        DiaPair rdp=diameter(root.right);
+        DiaPair sdp=new DiaPair();
+        sdp.ht=Math.max(ldp.ht,rdp.ht)+1;
+        int dia=ldp.ht+rdp.ht+2;
+        sdp.d=Math.max(dia,Math.max(ldp.d,rdp.d));
+                return sdp;
         }
    }
 }
