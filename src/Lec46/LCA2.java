@@ -30,6 +30,12 @@ public class LCA2 {
                 return left;
             }
         }
+        public TreeNode find(TreeNode root,TreeNode p){
+            if(root==null){
+                return null;
+            }
+            
+        }
     }
 }
 
