@@ -22,15 +22,21 @@ public class Symmetric_Tree {
 
     class Solution {
         public boolean isSymmetric(TreeNode root) {
-
+          return Mirror(root.left,root.right);
         }
-        public boolean Mirror(TreeNode root1,TreeNode root2){
-            if(root1==null && root2==null){
+
+        public boolean Mirror(TreeNode root1, TreeNode root2) {
+            if (root1 == null && root2 == null) {
                 return true;
-            }
-            else if(root1==null || root2==null){
+            } else if (root1 == null || root2 == null) {
                 return false;
             }
-
+       if(root1.val!=root2.val){
+           return false;
+       }
+       boolean left=Mirror(root1.left,root2.right);
+       boolean right=Mirror(root1.right,root2.left);
+       return left&& right;
+        }
     }
 }
