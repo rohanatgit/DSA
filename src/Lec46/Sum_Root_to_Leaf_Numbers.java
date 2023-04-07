@@ -18,7 +18,16 @@ public class Sum_Root_to_Leaf_Numbers {
 
         }
     }
-    public int sum(TreeNode node,int n){
+    public int sum(TreeNode root,int n){
+        if(root==null){
+            return 0;
+        }
+        if(root.left==null && root.right==null)
+        {
+            return n*10+root.val;
+        }
+      int ln=sum(root.left,n*10+root.val);
+        int rn=sum(root.right,n*10+root.val);
 
     }
 }
