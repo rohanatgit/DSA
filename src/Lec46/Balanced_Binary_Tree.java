@@ -24,9 +24,20 @@ public class Balanced_Binary_Tree {
     }
 
 class Solution{
-        public boolean isSBalanced(TreeNode root){
-
+        public boolean isBalanced(TreeNode root){
+      return isBalancedPair(root).isbal;
         }
-
+        public BalancedPair isBalancedPair(TreeNode root){
+            if(root==null){
+                return  new BalancedPair();
+            }
+            BalancedPair lbp=isBalancedPair(root.left);
+            BalancedPair rbp=isBalancedPair(root.right);
+            BalancedPair sbp=new BalancedPair();
+            sbp.ht=Math.max(lbp.ht,rbp.ht)+1;
+            int bf=Math.abs(lbp.ht-rbp.ht);
+            sbp.isbal=lbp.isbal&& rbp.isbal && bf<=1;
+            return sbp;
+        }
     }
 }
