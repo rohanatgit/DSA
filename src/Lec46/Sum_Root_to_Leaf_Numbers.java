@@ -15,7 +15,7 @@ public class Sum_Root_to_Leaf_Numbers {
   }
     class Solution {
         public int sumNumbers(TreeNode root) {
-
+       return sum(root,0);
         }
     }
     public int sum(TreeNode root,int n){
@@ -28,6 +28,6 @@ public class Sum_Root_to_Leaf_Numbers {
         }
       int ln=sum(root.left,n*10+root.val);
         int rn=sum(root.right,n*10+root.val);
-
+   return ln+rn;
     }
 }
