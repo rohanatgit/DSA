@@ -18,5 +18,15 @@ public class Balanced_Binary_Tree {
             this.right=right;
         }
     }
+    public class BalancedPair{
+        boolean isbal=true;
+        int ht=-1;
+    }
 
+class Solution{
+        public boolean isSBalanced(TreeNode root){
+
+        }
+
+    }
 }
