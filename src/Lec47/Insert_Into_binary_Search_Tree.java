@@ -18,8 +18,9 @@ public class Insert_Into_binary_Search_Tree {
   class Solution{
         public TreeNode insertIntoBinaryTree(TreeNode root,int val){
             if(root==null){
-                root= new TreeNode(val);
-                return root;
+                TreeNode n =new TreeNode();
+                n.val=val;
+                return n;
             }
             if(root.val>val){
                root.left= insertIntoBinaryTree(root.left,val);
