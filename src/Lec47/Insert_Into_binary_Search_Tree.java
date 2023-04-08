@@ -16,9 +16,20 @@ public class Insert_Into_binary_Search_Tree {
         }
     }
   class Solution{
-        public TreeNode insertIntoBinaryTree(TreeNode root){
-
+        public TreeNode insertIntoBinaryTree(TreeNode root,int val){
+            if(root==null){
+                root= new TreeNode(val);
+                return root;
+            }
+            if(root.val>val){
+               root.left= insertIntoBinaryTree(root.left,val);
+            }
+            else{
+                root.right=insertIntoBinaryTree(root.right,val);
+            }
+            return root;
         }
+
 
   }
 }
