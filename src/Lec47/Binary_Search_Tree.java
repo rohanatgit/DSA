@@ -8,9 +8,10 @@ public class Binary_Search_Tree {
       }
       private Node root;
       public Binary_Search_Tree(int[] in){
-          this.root=CreateTree();
+          this.root=CreateTree(in,0,in.length-1);
       }
-    private class CreateTree(Node){
+    private Node CreateTree(int[] in,int si,int ei){
 
+        return null;
     }
 }
