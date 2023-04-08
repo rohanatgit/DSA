@@ -10,5 +10,7 @@ public class Binary_Search_Tree {
       public Binary_Search_Tree(int[] in){
           this.root=CreateTree();
       }
+    private class CreateTree(Node){
 
+    }
 }
