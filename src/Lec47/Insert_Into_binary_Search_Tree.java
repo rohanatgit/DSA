@@ -15,5 +15,7 @@ public class Insert_Into_binary_Search_Tree {
             this.right=right;
         }
     }
-
+  class Solution{
+        public TreeNode insertIntoBinaryTree(TreeNode)
+  }
 }
