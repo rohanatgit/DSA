@@ -16,6 +16,9 @@ public class Insert_Into_binary_Search_Tree {
         }
     }
   class Solution{
-        public TreeNode insertIntoBinaryTree(TreeNode)
+        public TreeNode insertIntoBinaryTree(TreeNode root){
+
+        }
+
   }
 }
