@@ -26,8 +26,17 @@ public class Delete_Node_in_a_BST {
             }
             //element mil gaya isko delete karna hai
             else{
-
+                //1 child
+                if(root.left==null){
+                    return root.right;
+                }
+                else if(root.right==null){
+                    return root.left;
+                }
             }
+
+
+            return root;
         }
     }
 }
