@@ -26,17 +26,26 @@ public class Delete_Node_in_a_BST {
             }
             //element mil gaya isko delete karna hai
             else{
-                //1 child
+                //1 or 0  child
                 if(root.left==null){
                     return root.right;
                 }
                 else if(root.right==null){
                     return root.left;
                 }
+                else{
+
+                }
             }
 
-
             return root;
+        }
+        public int height(TreeNode root){
+            if(root==null){
+                return Integer.MIN_VALUE;
+            }
+            int r=height(root.right);
+            return Math.max(root.val,r);
         }
     }
 }
