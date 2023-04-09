@@ -47,5 +47,12 @@ public class Delete_Node_in_a_BST {
             int r=height(root.right);
             return Math.max(root.val,r);
         }
+//        public int min(TreeNode root){
+//            if(root==null){
+//                return Integer.MAX_VALUE;
+//            }
+//            int r=min(root.left);
+//            return Math.min(root.val,r);
+//        }
     }
 }
