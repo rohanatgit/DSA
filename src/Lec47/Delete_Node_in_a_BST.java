@@ -13,5 +13,9 @@ public class Delete_Node_in_a_BST {
           this.right = right;
       }
   }
+    class Solution {
+        public TreeNode deleteNode(TreeNode root, int key) {
 
+        }
+    }
 }
