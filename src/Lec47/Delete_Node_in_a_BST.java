@@ -16,6 +16,18 @@ public class Delete_Node_in_a_BST {
     class Solution {
         public TreeNode deleteNode(TreeNode root, int key) {
 
+
+
+            if(root.val<key){
+                root.right=deleteNode(root.right,key);
+            }
+            else if(root.val>key){
+                root.left=deleteNode(root.left,key);
+            }
+            //element mil gaya isko delete karna hai
+            else{
+
+            }
         }
     }
 }
