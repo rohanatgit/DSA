@@ -16,7 +16,9 @@ public class Delete_Node_in_a_BST {
     class Solution {
         public TreeNode deleteNode(TreeNode root, int key) {
 
-
+              if(root==null){
+         return null;
+     }
 
             if(root.val<key){
                 root.right=deleteNode(root.right,key);
@@ -34,17 +36,19 @@ public class Delete_Node_in_a_BST {
                     return root.left;
                 }
                 else{
-
+                   int lmax=max(root.left);
+                  root.left= deleteNode(root.left,lmax);
+                   root.val=lmax;
                 }
             }
 
             return root;
         }
-        public int height(TreeNode root){
+        public int max(TreeNode root){
             if(root==null){
                 return Integer.MIN_VALUE;
             }
-            int r=height(root.right);
+            int r=max(root.right);
             return Math.max(root.val,r);
         }
 //        public int min(TreeNode root){
