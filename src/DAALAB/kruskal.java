@@ -54,4 +54,4 @@ class ShortestPath {
         ShortestPath t = new ShortestPath();
         t.dijkstra(graph, 0);
     }
-}}
+}
