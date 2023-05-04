@@ -62,6 +62,6 @@ public class N_Queen {
         }
         System.out.println("*************************");
     }
-}
+
 //jitne col utne possible
 //n queen bethana hai hmko
