@@ -1,6 +1,7 @@
 package Lec27;
 
-import java.util.ArrayList;
+import
+        java.util.ArrayList;
 import java.util.List;
 
 public class SubSet {
