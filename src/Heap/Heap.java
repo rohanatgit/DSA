@@ -45,4 +45,14 @@ public class Heap {
             downheapify(mini);
         }
     }
+    public int getmin(){
+        return this.data.get(0);
+    }
+    public int size(){
+        return this.data.size();
+    }
+    public void display()
+    {
+        System.out.println(this.data);
+    }
 }
