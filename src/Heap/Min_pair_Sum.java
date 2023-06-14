@@ -16,6 +16,7 @@ public class Min_pair_Sum {
             int a=pq.poll();
             int b=pq.poll();
             sum+=a+b;
+            pq.add(a+b);
         }
         return sum;
     }
