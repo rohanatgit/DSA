@@ -22,4 +22,17 @@ public class Heap {
         this.data.set(i,jth);
         this.data.set(j,ith);
     }
+    public int remove(){
+        swap(0,this.data.size()-1);
+        int rv=this.data.remove(this.data.size()-1);
+        downheapify(0);
+        return rv;
+
+    }
+
+    private void downheapify(int pi) {
+        int lci=2*pi+1;
+        int rci=2*pi+2;
+        if(lci)
+    }
 }
