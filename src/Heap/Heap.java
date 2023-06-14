@@ -35,7 +35,7 @@ public class Heap {
         int rci=2*pi+2;
         int mini=pi;
         if(lci<this.data.size() && this.data.get(lci)<this.data.get(mini)){
-            mini=pi;
+            mini=lci;
         }
         if(rci<this.data.size() && this.data.get(rci)<this.data.get(mini)){
             mini=rci;
