@@ -33,6 +33,16 @@ public class Heap {
     private void downheapify(int pi) {
         int lci=2*pi+1;
         int rci=2*pi+2;
-        if(lci)
+        int mini=pi;
+        if(lci<this.data.size() && this.data.get(lci)<this.data.get(mini)){
+            mini=pi;
+        }
+        if(rci<this.data.size() && this.data.get(rci)<this.data.get(mini)){
+            mini=rci;
+        }
+        if(mini!=pi){
+            swap(mini,pi);
+            downheapify(mini);
+        }
     }
 }
