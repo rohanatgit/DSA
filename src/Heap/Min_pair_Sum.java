@@ -21,3 +21,5 @@ public class Min_pair_Sum {
         return sum;
     }
 }
+
+
