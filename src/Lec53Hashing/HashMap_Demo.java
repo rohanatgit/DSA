@@ -11,5 +11,11 @@ public class HashMap_Demo {
         map.put("akash",67);
         map.put("Omika",88);
         System.out.println(map);
+
+        //get
+        //0(1)
+        System.out.println(map.get("Raj"));
+
+        System.out.println(map.get("Omika"));
     }
 }
