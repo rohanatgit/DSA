@@ -17,5 +17,8 @@ public class HashMap_Demo {
         System.out.println(map.get("Raj"));
 
         System.out.println(map.get("Omika"));
+
+        //containsKey0(1)
+        System.out.println(map.containsKey("akash"));
     }
 }
