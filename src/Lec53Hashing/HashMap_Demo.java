@@ -9,7 +9,7 @@ public class HashMap_Demo {
         map.put("piya",90);
         map.put("nitish",77);
         map.put("akash",67);
-        map.put("Omika",88);
+        map.put(null,88);
         System.out.println(map);
 
         //get
@@ -20,5 +20,8 @@ public class HashMap_Demo {
 
         //containsKey0(1)
         System.out.println(map.containsKey("akash"));
+
+        //remove 0(1)
+        System.out.println(map.remove(map.remove("nitish")));
     }
 }
