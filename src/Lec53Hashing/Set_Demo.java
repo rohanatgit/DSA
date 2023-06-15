@@ -1,6 +1,7 @@
 package Lec53Hashing;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.TreeSet;
 
 public class Set_Demo {
@@ -27,6 +28,10 @@ public class Set_Demo {
       set1.add(90);
         System.out.println(set1);
 
+
+        //LinkedHashSet
+        LinkedHashSet<Integer>set2=new LinkedHashSet<>();
+        set2.add(-90);
     }
 
 }
