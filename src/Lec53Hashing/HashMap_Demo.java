@@ -1,6 +1,7 @@
 package Lec53Hashing;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.TreeMap;
 
 public class HashMap_Demo {
@@ -25,11 +26,17 @@ public class HashMap_Demo {
 //        //remove 0(1)
 //        System.out.println(map.remove(map.remove("nitish")));
 
-        TreeMap<String,Integer>map1=new TreeMap<>();
-        //add
-        map1.put("sud",90);
-        map1.put("aksh singh",89);
-        map1.put("punnet",77);
-        System.out.println(map1);
+//        TreeMap<String,Integer>map1=new TreeMap<>();
+//        //add
+//        map1.put("sud",90);
+//        map1.put("aksh singh",89);
+//        map1.put("punnet",77);
+//        System.out.println(map1);
+
+        LinkedHashMap<String,Integer>map=new LinkedHashMap<>();
+        map.put("shivang",89);
+        map.put("rohan",77);
+        map.put("faraz",55);
+        System.out.println(map);
     }
 }
