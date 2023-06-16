@@ -14,16 +14,20 @@ public class Group_Anagram  {
             String s=strs[i];
             String key=GenerateKey(s);
             if(!map.containsKey(key)){
-                map.put(s,new ArrayList<>());
+                map.put(key,new ArrayList<>());
             }
-            map.get(key).add(key);
+            map.get(key).add(s);
         }
-
+        List<List<String>>ans =new ArrayList<>();
+      for(String key:map.keySet()){
+          ans.add(map.get(key));
+      }
+      return ans;
     }
     public static String GenerateKey(String s){
         int[ ] freq=new int[26];
         for(int i=0;i<s.length();i++){
-            char ch=s.charAt(0);
+            char ch=s.charAt(i);
             freq[ch-'a']=freq[ch-'a']+1;
 
         }
