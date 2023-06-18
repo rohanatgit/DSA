@@ -28,6 +28,7 @@ public class HashMap <K,V>{
         this(4);
     }
    public int hashfunction(K key){
+      int bn=key.hashCode();
 
    }
 }
