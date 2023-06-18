@@ -52,7 +52,20 @@ public class HashMap <K,V>{
             }
             temp=temp.next;
         }
-    return null;
+          return null;
+    }
+
+
+    public boolean containsKey(K key){
+        int bn=hashfunction(key);
+        Node temp=this.bucketarray.get(bn);
+        while(temp!=null){
+            if(temp.key.equals(key)) {
+                return true;
+            }
+            temp=temp.next;
+        }
+        return false;
     }
    public int hashfunction(K key){
       int bn=key.hashCode() % this.bucketarray.size();
