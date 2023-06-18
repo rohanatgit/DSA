@@ -43,6 +43,17 @@ public class HashMap <K,V>{
         this.bucketarray.set(bn,nn);
         this.size++;
     }
+    public V get(K key){
+        int bn=hashfunction(key);
+        Node temp=this.bucketarray.get(bn);
+        while(temp!=null){
+            if(temp.key.equals(key)) {
+                return temp.value;
+            }
+            temp=temp.next;
+        }
+    return null;
+    }
    public int hashfunction(K key){
       int bn=key.hashCode() % this.bucketarray.size();
 
