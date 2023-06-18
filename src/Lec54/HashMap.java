@@ -67,6 +67,11 @@ public class HashMap <K,V>{
         }
         return false;
     }
+
+
+    public V remove(K key){
+
+    }
    public int hashfunction(K key){
       int bn=key.hashCode() % this.bucketarray.size();
 
