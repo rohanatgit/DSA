@@ -42,7 +42,20 @@ public class HashMap <K,V>{
         nn.next=temp;
         this.bucketarray.set(bn,nn);
         this.size++;
+        double If=(1.0*this.size)/this.bucketarray.size();
+        double thf=2.0;
+        if(If>thf){
+            reshaing();
+        }
     }
+
+    private void reshaing() {
+        ArrayList<Node>nba=new ArrayList<>();
+        for(int i=0;i<this.bucketarray.size();i++){
+            nba.add(null);
+        }
+    }
+
     public V get(K key){
         int bn=hashfunction(key);
         Node temp=this.bucketarray.get(bn);
@@ -106,9 +119,13 @@ public class HashMap <K,V>{
    @Override
     public String toString(){
         String s="{";
-
-
-
+       for(Node node:bucketarray){
+           while(node!=null){
+               s=s+node.key+"="+node.value+", ";
+               node=node.next;
+           }
+       }
+          s=s+"}";
         return s;
    }
 }
