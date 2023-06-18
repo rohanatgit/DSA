@@ -16,8 +16,18 @@ public class HashMap <K,V>{
         }
     }
     private ArrayList<Node>bucketarray;
-    public HashMap(){
+    private int size=0;
 
+    public HashMap(int x){
+       this.bucketarray=new ArrayList<>();
+       for(int i=0;i<x;i++){
+           this.bucketarray.add(null);
+       }
     }
+    public HashMap(){
+        this(4);
+    }
+   public int hashfunction(K key){
 
+   }
 }
