@@ -103,4 +103,12 @@ public class HashMap <K,V>{
       }
       return bn;
    }
+   @Override
+    public String toString(){
+        String s="{";
+
+
+
+        return s;
+   }
 }
