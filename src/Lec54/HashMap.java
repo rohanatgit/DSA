@@ -68,8 +68,31 @@ public class HashMap <K,V>{
         return false;
     }
 
-
     public V remove(K key){
+        int bn=hashfunction(key);
+        Node curr=this.bucketarray.get(bn);
+        Node prev=null;
+        while(curr!=null){
+            if(curr.key.equals(key)) {
+                break;
+            }
+            prev=curr;
+            curr=curr.next;
+        }
+        if(curr==null){
+            return null;
+        }
+        this.size--;
+        if(prev==null)
+        {
+            this.bucketarray.set(0,curr.next);
+            curr.next=null;
+        }
+        else{
+            prev.next=curr.next;
+            curr.next=null;
+        }
+        return curr.value;
 
     }
    public int hashfunction(K key){
